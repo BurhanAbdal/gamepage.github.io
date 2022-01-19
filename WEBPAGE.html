@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 1px;
+  text-align: center;
+  background-color: black ;
+  background-repeat: no-repeat; 
+  color: rgb(204, 247, 11);
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: rgb(15, 15, 15);
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: rgb(204, 247, 11);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+ color: aqua;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: rgb(204, 247, 11);
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<bod>
+
+<div class="header">
+  <h1>Gaming Hub</h1>
+  <p> Lets Play.<span style='font-size:23px;'>&#128519;</span></p>
+</div>
+
+<div class="navbar">
+  <MARQUEE LOOP="10" BGCOLOR="black"><font size=6><font color=aqua>***Welcome to Gaming Hub***</font></font></MARQUEE>
+</div>
+
+<div class="row">
+  <div class="side">
+    <img src="g2.jpg" width="300" height="110">
+    <img src="g4.jpg" width="300" height="250">
+    <img src="g5.jpg" width="150" height="150">
+    <img src="g6.jpg" width="150" height="150">
+
+   
+    
+  </div>
+  <div class="main"style="background-color:black;">
+    <i class="fas fa-shopping-cart"></i>
+    <h2>To Check Here Gaming Hub<span style='font-size:23px;'>&#128519;</span></h2>
+
+    <h5>Thankyou for vist our Gaming Hub</h5>
+
+   <img src="g7.jpg" width="400" height="400">
+   <img src="g8.jpg" width="450" height="350">
+   <input type="button"  style="background-color:black;color:rgb(204, 247, 11);width:200px; height: 60px;px;" value="MemoryGame"  onclick="fun()">
+   <input type="button"  style="background-color:black;color:rgb(204, 247, 11);width:200px; height:60px;" value="HangMan" onclick="deleteCourse();" />
+
+    
+  </div>
+</div>
+
+<div class="footer">
+  <h2>www.OurProject.com</h2>
+</div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+function fun() {
+    swal("You entered Successful!", "Welcome Memory Game! ", "success")
+    
+     .then(function() {
+      
+     window.location = "http://localhost:3000/";
+     
+   });
+    } 
+
+</script> 
+</body>
+</html>
